@@ -63,7 +63,7 @@ function Login() {
         })
     }
     const handleSubmit = () => {
-        alert(allValue)
+        alert(`Kết quả gồm: email: ${allValue.email}, password: ${allValue.password}, checkbox: ${allValue.isActive}`)
     }
 
     return (
