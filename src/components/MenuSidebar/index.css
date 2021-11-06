@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.menu{
+    width: 400px;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+}
+.menusidebar {
+    position: absolute;
+    margin-top: 20px;
+    width: 300px;
+    font-family: 'Open Sans', sans-serif;
+}
+.menumain {
+    position: relative;
+    margin-left: 30px;
+    width: 200px;
+    height: 100%;
+}
+.menumain > h1 {
+    font-size: 15px;
+    margin-top: 10px;
+    color: rgb(47, 102, 255);
+    font-weight: bold;
+}
+.menuitem {
+    margin-left: -10px;
+    width: 100%;
+    margin-bottom: 5px;
+    height: 100%;
+}
+.menuitem_ul{
+    width: 100%;
+    transition: all ease 1s;
+    height: 100%;
+}
+.menuitem_ul > h2 {
+    font-size: 15px;
+    width: 100%;
+    padding: 10px 10px;
+    opacity: 0.6;
+}
+.menuitem_ul > h2:hover {
+    display: flex;
+    background:rgb(225, 240, 204);
+    transition: all ease 0.5s;
+    border-radius: 7px;
+    align-items: center;
+    opacity: 1;
+}
+.wrap_ul {
+    display: block;
+    transform: scaleY(-100px, 0px);
+    transition: all ease 0.5s;
+    opacity: 0.6;
+    transition: opacity 0.6s linear;
+}
+.menuitem_ul-level2 {
+    transform: scaleY(-100px, 0px);
+    transition: all ease 0.2s;
+    opacity: 0.6;
+    transition: opacity 0.6s linear;
+}
+.menuitem_ul-level2 > li {
+    text-decoration: none;
+    list-style: none;
+    margin-top: 15px;
+    height: 30px;
+    border-radius: 4px;
+    padding-left: 20px;
+    padding-top: 5px;
+    width: 200px;
+    margin-left: -20px;
+    transform: scaleY(-100px, 0px);
+    transition: all ease 1s;
+}
+.itemLink {
+    display: block;
+    text-decoration: none;
+    list-style: none;
+    margin-top: 15px;
+    height: 30px;
+    border-radius: 4px;
+    padding-left: 20px;
+    padding-top: 5px;
+    width: 200px;
+    margin-left: -20px;
+    transform: scaleY(-100px, 0px);
+    transition: all ease 1s;
+    color: black;
+}
+
+.menuitem_ul-level2 > li:hover {
+    background: rgb(134, 169, 197);
+    opacity: 1;
+    transition: opacity all 0.05s;
+    font-weight: bold;
+    color: black;
+}
+
+.itemLink:hover {
+    background: rgb(134, 169, 197);
+    opacity: 1;
+    transition: all ease 0.05s;
+    font-weight: bold;
+}
+
+.arrows {
+    position: absolute;
+    font-size: 11px;
+    right: -8px;
+    margin-top: 5px;
+}
+.arrowss {
+    font-size: 11px;
+    margin-right: -10px;
+    transform: rotate(90deg);
+}
+.menuitem_ul-level2_two {
+    display: none;
+}
+
+.menusidebar_components{
+    width: 300px;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.menumain_components {
+    position: relative;
+    margin-left: 30px;
+    width: 200px;
+}
+
+.menumain_components > h1 {
+    font-size: 15px;
+    margin-top: 30px;
+    color: rgb(47, 102, 255);
+    font-weight: bold;
+}
+
+
+.menusidebar_widgets {
+    width: 300px;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+.menumain_widgets {
+    position: relative;
+    margin-left: 30px;
+    width: 200px;
+}
+.menumain_widgets > h1 {
+    font-size: 15px;
+    margin-top: 30px;
+    color: rgb(47, 102, 255);
+    font-weight: bold;
+}
+
+.menumain_forms {
+    position: relative;
+    margin-left: 30px;
+    width: 200px;
+}
+.menumain_forms > h1 {
+    font-size: 15px;
+    margin-top: 30px;
+    color: rgb(47, 102, 255);
+    font-weight: bold;
+}
+
+.menumain_charts{
+    position: relative;
+    margin-left: 30px;
+    width: 200px;
+}
+.menumain_charts > h1 {
+    font-size: 15px;
+    margin-top: 30px;
+    color: rgb(47, 102, 255);
+    font-weight: bold;
+}
+
+.fa-rocket,
+.fa-sticky-note,
+.fa-mobile-alt,
+.fa-gem,
+.fa-car,
+.fa-border-none,
+.fa-chart-pie,
+.fa-map-signs,
+.fa-globe,
+.fa-calendar-alt,
+.fa-lightbulb,
+.fa-gamepad,
+.fa-image,
+.fa-chart-line {
+    margin-right: 10px;
+}

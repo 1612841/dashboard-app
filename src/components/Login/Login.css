@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Open+Sans&display=swap');
+:root{
+    overflow-x: hidden;
+}
+.login {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+.information {
+    position: relative;
+    width: 700px;
+    height: 100vh;
+    background-color: black;
+}
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-info {
+    display: block;
+    background-image: url(../images/imgbackg.jpg);
+    width: 700px;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    transform: translateX(0);
+    transition:all 1s ease;
+}
+.section-infos{
+    display: block;
+    background-image: url(../images/imgbackg2.jpg);
+    width: 700px;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    transform: translateX(0);
+    transition:all 1s ease;
+}
+.section-infoss {
+    display: block;
+    background-image: url(../images/imgbackg3.jpg);
+    width: 700px;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    transform: translateX(0);
+    transition:all 1s ease;
+}
+ .active {
+    transform: translateX(0);
+    transition:all 1s ease;
+}
+
+.section-info > h4,
+.section-infos > h4,
+.section-infoss > h4 {
+    font-size: 40px;    
+    margin-top: 400px;
+    color: white;
+}
+.section-info > p,
+.section-infos > p,
+.section-infoss > p {
+    font-size: 18px;    
+    margin: -10px 100px 0px 100px;
+    color: white;
+    font-weight: lighter;
+}
+
+.button_font {
+    position: absolute;
+    color: white;
+    background-color: transparent;
+    top: 500px;
+    left: 20px;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+}
+.button_fonts {
+    position: absolute;
+    color: white;
+    background-color: transparent;
+    top: 500px;
+    right: 20px;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+}
+.button_font:hover,
+.button_fonts:hover {
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 4px;
+}
+
+.dotslide {
+    display: flex;
+    position: absolute;
+    margin-top: 900px;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+}
+.activetwo {
+    background-color: transparent;
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+.dotslide .circle_slide{
+    background-color: transparent;
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+.dotslide .circle_slide >p  {
+    margin: -81px 10px 0px 0px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: rgb(245, 247, 245);
+    font-size: 100px;
+}
+.circle_slide:hover {
+    background: rgba(0,0,0,0.5);
+}
+.activetwo >p  {
+    margin: -81px 10px 0px 0px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: rgb(4, 34, 4);
+    font-size: 100px;
+}
+.activetwo:hover {
+    background: rgba(0,0,0,0.5);
+}
+
+@media screen and (max-width: 1500px) {
+    .information,
+    .section {
+        display: none;
+    }
+}
+
+.loginform {
+    position: relative;
+    left: 10px;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 700px);
+    height: 100vh;
+}
+.formheading {
+    position: absolute;
+    left: 200px;
+    top: 250px;
+    width: 100%;
+}
+.formheading > h1 {
+    font-family: 'Kaushan Script', 'cursive';
+}
+.formheading > p {
+    font-size: 17px;
+}
+.formheading .inform {
+    position: absolute;
+    top: 160px
+}
+.formheading .inform > a{
+    margin-left: 10px;
+    text-decoration: none;
+    color: blue;
+}
+.formheading .inform > a:hover {
+    text-decoration: underline;
+}
+.loginform > hr{
+    width: 65%;
+    color: black;
+    margin-top: -120px;
+    margin-left: 200px;
+}
+
+.formsubmit {
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    top: 500px;
+    left: 200px;
+}
+.form {
+    display: block;
+    width: 500px;
+}
+.other {
+    margin-left: -60px;
+}
+.form > label {
+    display: block;
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.form .inputform {
+    width: 400px;
+    height: 40px;
+    border-radius: 4px;
+    padding-left: 20px;
+}
+.loginform .hr {
+    position: absolute;
+    width: 65%;
+    color: black;
+    margin-top: 260px;
+    margin-left: 200px;
+}
+
+@media screen and (max-width: 2000px) {
+    .loginform {
+        width: 100%;
+    }
+    .form .inputform {
+        width: 300px;
+    }
+    .other {
+        margin-left: -165px;
+    }
+}
+@media screen and (max-width: 1500px) {
+    .loginform {
+        width: 100%;
+    }
+    .form .inputform {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .loginform {
+        width: 100%;
+    }
+    .formsubmit {
+        display: block;
+    }
+    .form{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .other {
+        margin-left: 0px;
+    }
+    .form .inputform {
+        width: 380px;
+    }
+    .forms {
+        margin-top: 120px;
+    }
+    .loginform .hr{
+        margin-top: 500px;
+    }
+    .submit {
+        margin-top: 120px;
+    }
+}
+
+.forms {
+    position: absolute;
+    top: 600px;
+    left: 195px
+}
+.submit {
+    position: absolute;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    right: 365px;
+    top: 680px;
+    width: 100%;
+}
+.submit > a{
+    text-decoration: none;
+    color: blue;
+    margin-right: 10px;
+}
+.submit > button {
+    background-color: rgb(56, 56, 255);
+    color: white;
+    padding: 7px 18px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bolder;
+}
