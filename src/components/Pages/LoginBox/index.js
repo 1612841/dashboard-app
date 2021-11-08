@@ -48,12 +48,14 @@ function LoginBox() {
                 <div className="form_boxed">
                     <input onChange={handleChangeInputOne} value={inputone} type='text' className='box_input' placeholder='Email here...' />
                     <input onChange={handleChangeInputTwo} value={inputtwo} type='text' className='box_input' placeholder='Password here...' />
-                    <div className='checkbox'>
+                    <div className='checkboxlogin'>
                         <input onChange={handleChangeInputThree} value={inputthree} type="checkbox" className='box_input_check' />
                         <p>Keep me logged in</p>
                     </div>
                 </div>
-                <p className='box_register'>No account?<a href='/register'>Sign up now</a></p>
+                <div className='box_register'>
+                    <p >No account?<a href='/register'>Sign up now</a></p>
+                </div>
                 <div className='box_recover'>
                     <a href='/forgotpassword'>Recover Password</a>
                     <button onClick={handleSubmit} type='button' >Login to Dashboard</button>
