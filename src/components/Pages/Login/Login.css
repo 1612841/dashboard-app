@@ -1,7 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Open+Sans&display=swap');
-:root{
-    overflow-x: hidden;
-}
 .login {
     margin: 0 auto;
     padding: 0 auto;
@@ -9,7 +6,7 @@
 }
 .information {
     position: relative;
-    width: 35%;
+    width: 40%;
     height: 100vh;
     transition: all ease 0.8s;
 }
@@ -25,10 +22,12 @@
     justify-content: center;
     align-items: center;
     transition: all ease 0.8s;
+    width: 100%;
+    overflow-x: hidden;
 }
 .section-info {
     display: block;
-    background-image: url(../../images/imgbackg.jpg);
+    background-image: url(../../../images/imgbackg.jpg);
     width: 700px;
     height: 100vh;
     background-repeat: no-repeat;
@@ -36,11 +35,10 @@
     text-align: center;
     justify-content: center;
     opacity: 1;
-    transition:all ease 0.8s;
 }
 .section-infos{
     display: block;
-    background-image: url(../../images/imgbackg2.jpg);
+    background-image: url(../../../images/imgbackg2.jpg);
     width: 700px;
     height: 100vh;
     background-repeat: no-repeat;
@@ -52,7 +50,7 @@
 }
 .section-infoss {
     display: block;
-    background-image: url(../../images/imgbackg3.jpg);
+    background-image: url(../../../images/imgbackg3.jpg);
     width: 700px;
     height: 100vh;
     background-repeat: no-repeat;
@@ -261,7 +259,7 @@
     position: absolute;
     width: 86.5%;
     height: auto;
-    top: 700px;
+    top: 730px !important;
     display: flex;   
     justify-content: right;
     align-items: center;

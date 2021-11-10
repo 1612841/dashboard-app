@@ -22,7 +22,7 @@ const dataSlide = [
     },
 ]
 
-function Login() {
+function Login(props) {
 
     const [current, setCurrent] = useState(0);
     const [inputone, setInputone] = useState('');
@@ -65,7 +65,6 @@ function Login() {
     const handleSubmit = () => {
         alert(`Kết quả gồm: email: ${allValue.email}, password: ${allValue.password}, checkbox: ${allValue.isActive}`)
     }
-
     return (
         <div className='login'>
             <div className="information">

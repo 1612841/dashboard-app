@@ -8,20 +8,30 @@ import LoginBox from './components/Pages/LoginBox/index';
 import Register from './components/Pages/Register/Register';
 import Registerbox from './components/Pages/RegisterBox/Registerbox';
 import Forgot from './components/Pages/forgotpassword/Forgot';
+import Mailbox from './components/Application/Mailbox/Mailbox';
+import {
+  createBrowserHistory,
+  createHashHistory,
+  createMemoryHistory
+} from 'history' 
 
-function App() {
+function App(props) {
   return (
+    <> 
       <Router>
-        <Routes >
-          <Route path='/' element={<MenuSideBar />} >
-          </Route>
-          <Route path="/login" element={<Login />} />
-          <Route path="/loginboxed" element={<LoginBox />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/registerboxed" element={<Registerbox />} />
-          <Route path="/forgotpassword" element={<Forgot />} />
-        </Routes>
+          <Routes >
+            <Route path="/login" element={<Login />} />
+            <Route path="/loginboxed" element={<LoginBox />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/registerboxed" element={<Registerbox />} />
+            <Route path="/forgotpassword" element={<Forgot />} />
+          </Routes>
+          <MenuSideBar />
+          <Routes>
+            <Route path='/mailbox' element={<Mailbox />} /> 
+          </Routes>
       </Router>
+    </>
   );
 }
 

@@ -1,20 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
 
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(211, 212, 211); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: green; 
+}
 .menu{
-    width: 400px;
-    height: 100vh;
+    width: 16%;
+    height: 100%;
     font-family: 'Open Sans', sans-serif;
+    position: fixed;
+    z-index: 100;
+    border-right: 0.01px solid rgb(231, 229, 229);
+}
+.menu:hover { 
+   overflow-y:auto;
 }
 .menusidebar {
-    position: absolute;
+    position: relative;
     margin-top: 20px;
-    width: 300px;
+    width: 100%;
     font-family: 'Open Sans', sans-serif;
 }
 .menumain {
     position: relative;
     margin-left: 30px;
-    width: 200px;
+    width: 250px;
     height: 100%;
 }
 .menumain > h1 {
@@ -108,7 +134,7 @@
 .arrows {
     position: absolute;
     font-size: 11px;
-    right: -8px;
+    right: -10px;
     margin-top: 5px;
 }
 .arrowss {
@@ -129,7 +155,7 @@
 .menumain_components {
     position: relative;
     margin-left: 30px;
-    width: 200px;
+    width: 250px;
 }
 
 .menumain_components > h1 {
@@ -148,7 +174,7 @@
 .menumain_widgets {
     position: relative;
     margin-left: 30px;
-    width: 200px;
+    width: 250px;
 }
 .menumain_widgets > h1 {
     font-size: 15px;
@@ -160,7 +186,7 @@
 .menumain_forms {
     position: relative;
     margin-left: 30px;
-    width: 200px;
+    width: 250px;
 }
 .menumain_forms > h1 {
     font-size: 15px;
@@ -172,7 +198,7 @@
 .menumain_charts{
     position: relative;
     margin-left: 30px;
-    width: 200px;
+    width: 250px;
 }
 .menumain_charts > h1 {
     font-size: 15px;
@@ -196,4 +222,11 @@
 .fa-image,
 .fa-chart-line {
     margin-right: 10px;
+}
+
+@media screen and (max-width: 1500px) {
+    .menu, .menusidebar {
+        display: none;
+        margin-left: -100%;
+    }
 }
