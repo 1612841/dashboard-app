@@ -1,19 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Open+Sans&display=swap');
-:root{
-    overflow-x: hidden;
-}
 .login {
-    margin: 0;
-    padding: 0;
+    margin: 0 auto;
+    padding: 0 auto;
     display: flex;
-    width: 100vw;
-    height: 100vh;
 }
 .information {
     position: relative;
-    width: 700px;
+    width: 40%;
     height: 100vh;
-    background-color: black;
+    transition: all ease 0.8s;
 }
 .section {
     height: 100vh;
@@ -21,45 +16,54 @@
     justify-content: center;
     align-items: center;
 }
+.sections {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 0.8s;
+    width: 100%;
+    overflow-x: hidden;
+}
 .section-info {
     display: block;
-    background-image: url(../images/imgbackg.jpg);
+    background-image: url(../../../images/imgbackg.jpg);
     width: 700px;
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
     justify-content: center;
-    transform: translateX(0);
-    transition:all 1s ease;
+    opacity: 1;
 }
 .section-infos{
     display: block;
-    background-image: url(../images/imgbackg2.jpg);
+    background-image: url(../../../images/imgbackg2.jpg);
     width: 700px;
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
     justify-content: center;
-    transform: translateX(0);
-    transition:all 1s ease;
+    opacity: 1;
+    transition:all ease 0.8s;
 }
 .section-infoss {
     display: block;
-    background-image: url(../images/imgbackg3.jpg);
+    background-image: url(../../../images/imgbackg3.jpg);
     width: 700px;
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
     justify-content: center;
-    transform: translateX(0);
-    transition:all 1s ease;
+    opacity: 1;
+    transition:all ease 0.8s;
 }
- .active {
-    transform: translateX(0);
-    transition:all 1s ease;
+
+.active {
+    opacity: 0;
+    transition: all ease 0.8s;
 }
 
 .section-info > h4,
@@ -154,160 +158,132 @@
     background: rgba(0,0,0,0.5);
 }
 
-@media screen and (max-width: 1500px) {
-    .information,
-    .section {
-        display: none;
-    }
-}
-
 .loginform {
     position: relative;
-    left: 10px;
-    top: 0px;
+    width: 65%;
+    height: 100vh;
     display: flex;
+    justify-content: center;
     align-items: center;
-    width: calc(100% - 700px);
+}
+.wraplogin {
+    position: relative;
+    display: flex;
+    width: 70%;
     height: 100vh;
 }
-.formheading {
+.formheadinglogin {
     position: absolute;
-    left: 200px;
-    top: 250px;
     width: 100%;
+    top: 300px;
+    width: 100%;
+    height: 210px;
 }
-.formheading > h1 {
+.formheadinglogin > h1 {
+    font-size: 27px;
     font-family: 'Kaushan Script', 'cursive';
+    margin-bottom: 60px;
 }
-.formheading > p {
-    font-size: 17px;
+.formheadinglogin > p{
+    font-size: 20px;
+    margin-top: -20px;
 }
-.formheading .inform {
-    position: absolute;
-    top: 160px
+.inform {
+    font-size: 18px !important;
+    margin-top: 22px !important;
 }
-.formheading .inform > a{
-    margin-left: 10px;
+.inform > a{
     text-decoration: none;
-    color: blue;
+    margin-left: 5px;
+    font-size: 18px;
 }
-.formheading .inform > a:hover {
-    text-decoration: underline;
+.login_hr {
+    position: absolute;
+    width: 100%;
+    top: 510px;
+    width: 86.5%;
+    height: 10px;
 }
-.loginform > hr{
-    width: 65%;
+.login_hr > hr {
     color: black;
-    margin-top: -120px;
-    margin-left: 200px;
 }
-
 .formsubmit {
     position: absolute;
     width: 100%;
-    height: 500px;
+    top: 550px;
+    width: 100%;
+    height: 200px;
     display: flex;
-    top: 500px;
-    left: 200px;
 }
 .form {
     display: block;
-    width: 500px;
-}
-.other {
-    margin-left: -60px;
+    width: 40%;
+    margin-right: 40px;
 }
 .form > label {
-    display: block;
-    font-size: 18px;
+    font-size: 17px;
+}
+.form > input {
+    padding: 9px 9px;
     width: 100%;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
 }
-.form .inputform {
-    width: 400px;
-    height: 40px;
-    border-radius: 4px;
-    padding-left: 20px;
-}
-.loginform .hr {
-    position: absolute;
-    width: 65%;
-    color: black;
-    margin-top: 260px;
-    margin-left: 200px;
-}
-
-@media screen and (max-width: 2000px) {
-    .loginform {
-        width: 100%;
-    }
-    .form .inputform {
-        width: 300px;
-    }
-    .other {
-        margin-left: -165px;
-    }
-}
-@media screen and (max-width: 1500px) {
-    .loginform {
-        width: 100%;
-    }
-    .form .inputform {
-        width: 300px;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .loginform {
-        width: 100%;
-    }
-    .formsubmit {
-        display: block;
-    }
-    .form{
-        width: 100%;
-        margin-top: 20px;
-    }
-    .other {
-        margin-left: 0px;
-    }
-    .form .inputform {
-        width: 380px;
-    }
-    .forms {
-        margin-top: 120px;
-    }
-    .loginform .hr{
-        margin-top: 500px;
-    }
-    .submit {
-        margin-top: 120px;
-    }
-}
-
 .forms {
     position: absolute;
-    top: 600px;
-    left: 195px
+    width: 100%;
+    height: auto;
+    top: 640px;
+    display: flex;   
+    align-items: center;
 }
+.forms > input[type=checkbox] {
+    transform: scale(1.5);
+}
+.forms > label {
+    margin-left: 10px;
+}
+
+.login_hrunder {
+    position: absolute;
+    width: 100%;
+    top: 670px;
+    width: 86.5%;
+    height: 10px;
+}
+.login_hrunder > hr {
+    color: black;
+}
+
 .submit {
     position: absolute;
-    display: flex;
+    width: 86.5%;
+    height: auto;
+    top: 730px !important;
+    display: flex;   
     justify-content: right;
     align-items: center;
-    right: 365px;
-    top: 680px;
-    width: 100%;
 }
-.submit > a{
+
+.submit > a {
     text-decoration: none;
     color: blue;
     margin-right: 10px;
 }
 .submit > button {
-    background-color: rgb(56, 56, 255);
-    color: white;
-    padding: 7px 18px;
+    padding: 10px 30px;
+    margin-left: 20px;
+    background-color: rgb(38, 38, 253);
     border-radius: 6px;
-    font-size: 15px;
-    font-weight: bolder;
+    color: white;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1500px) {
+    .information {
+        display: none;
+    }
+    .loginform {
+        width: 100%;
+    }
 }

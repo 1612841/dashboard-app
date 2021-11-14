@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './Login.css';
+import './Forgot.css';
 
 const dataSlide = [
     {
@@ -22,7 +22,7 @@ const dataSlide = [
     },
 ]
 
-function Login() {
+function Forgot() {
 
     const [current, setCurrent] = useState(0);
     const [inputone, setInputone] = useState('');
@@ -63,59 +63,54 @@ function Login() {
         })
     }
     const handleSubmit = () => {
-        alert(allValue)
+        alert(`Kết quả gồm: email: ${allValue.email}, password: ${allValue.password}, checkbox: ${allValue.isActive}`)
     }
 
     return (
-        <div className='login'>
+        <div className='forgot'>
             <div className="information">
                 <section className='section'>
                     <button type='button' className='button_font' onClick={preSlide}><i class="fas fa-chevron-left"></i></button>
                     <button type='button' className='button_fonts'  onClick={nextSlide}><i class="fas fa-chevron-right"></i></button>
-                    {dataSlide.map((item) => 
-                            item.key === current &&  
-                            <div key={item.key} className={item.key === current? `active ${item.class} ` : item.class}>
-                                <h4>{item.heading}</h4>
-                                <p>{item.passage}</p>
-                            </div>
-                    )}
-                    <div className='dotslide'>
-                        {
-                            dataSlide.map((item, index) => <button type='button' onClick={() => setCurrent(index)} className={index === current? ' activetwo' : 'circle_slide' }><p>.</p></button>)
-                        }
+                    <div className='sections'>
+                        {dataSlide.map((item) => 
+                                item.key === current &&  
+                                    <div style={{borderRadius: '30px'}} key={item.key} className={item.key !== current? 'active' : item.class }>
+                                        <h4>{item.heading}</h4>
+                                        <p>{item.passage}</p>
+                                    </div>
+                        )}
+                        <div className='dotslide'>
+                            {
+                                dataSlide.map((item, index) => <button type='button' onClick={() => setCurrent(index)} className={index === current? ' activetwo' : 'circle_slide' }><p>.</p></button>)
+                            }
+                        </div>
                     </div>
                 </section>
             </div>
-            <div className="loginform">
-                <div className="formheading">
-                    <h1>Architect</h1>
-                    <p>Welcome back,</p>
-                    <p>Please sign in to your account</p>
-                    <p className="inform">No account? <a href='/register'>Sign up now</a></p>
-                </div>
-                <hr />
-                <div className="formsubmit">
-                    <div className="form">
-                        <label for='email'>Email</label>
-                        <input type='text' onChange={handleChangeInputOne} className='inputform' id='email' placeholder='Email here...' value={inputone}></input>
+            <div className='forgottwo'>
+                <div className="forgotform">
+                    <div className="wrapforgot">
+                        <div className="formheadingforgot">
+                            <h1>Architect</h1>
+                            <p>Forgot your Password?</p>
+                            <p className='forgottenp'>Use the form below to recover it.</p>
+                        </div>
+                        <div className="formsubmit">
+                            <div className="form">
+                                <label for='email'>Email</label>
+                                <input type='text' onChange={handleChangeInputOne} className='inputform' id='email' placeholder='Email here...' value={inputone}></input>
+                            </div>
+                        </div>
+                        <div className='submit'>
+                            <a href='/login'>Sign in existing account</a>
+                            <button onClick={handleSubmit} type='submit'>Recover Password</button>
+                        </div>
                     </div>
-                    <div className="form other">
-                        <label for='password'>Password</label>
-                        <input type='text' onChange={handleChangeInputTwo} className='inputform' id='password' placeholder='Password here...' value={inputtwo}></input>
-                    </div>
-                </div>
-                <div className='forms'>
-                    <input onChange={handleChangeInputThree} id='formcheck' type='checkbox' checked={inputthree} />
-                    <label for='formcheck' >Keep me logged in</label>
-                </div>
-                <hr className='hr' />
-                <div className='submit'>
-                    <a href='/forgotpassword'>Recover Password</a>
-                    <button onClick={handleSubmit} type='submit'>Login to Dashboard</button>
                 </div>
             </div>
         </div>
     );
 }
 
-export default Login;
+export default Forgot;

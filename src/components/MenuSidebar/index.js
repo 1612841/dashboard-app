@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import './index.css';
-import '@fortawesome/fontawesome-free/js/all.js'
+import '@fortawesome/fontawesome-free/js/all.js';
 
 const analytics = [
     'Analytics',
@@ -37,10 +37,10 @@ const pages = [
 ];
 
 const application = [
-    'Mailbox',
-    'Chat',
-    'FAQ Section',
-    'Forums'
+    ['Mailbox', '/mailbox'],
+    ['Chat', '/chat'],
+    ['FAQ Section', '/faqsection'],
+    ['Forums', '/forums']
 ];
 
 const elements = [
@@ -73,7 +73,7 @@ function MenuSideBar() {
     const [arrowChange8, setArrowChange8] = useState(false);
 
     return (
-    <div className="menu">
+    <nav className="menu">
         <div className='menusidebar'>
             <div className="menumain">
                 <h1>MENU</h1>
@@ -104,7 +104,7 @@ function MenuSideBar() {
                         <h2><span className='fas fa-mobile-alt' /> Application  <span className={arrowChange3? 'fas fa-chevron-right arrowss' : 'fas fa-chevron-right arrows'} /></h2>
                         <ul className={arrowChange3? 'menuitem_ul-level2' : 'menuitem_ul-level2_two'}>
                             {application.map((item, index) => 
-                                <li  key={item}>{item}</li>
+                                <Link className="itemLink" to={item[1]} key={index}>{item[0]}</Link>
                                 )}
                         </ul>
                     </ul>
@@ -213,7 +213,7 @@ function MenuSideBar() {
                     </div>
                 </div>
         </div> 
-    </div>
+    </nav>
     )
 }
 

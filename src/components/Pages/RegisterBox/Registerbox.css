@@ -1,0 +1,181 @@
+.registerbox {
+    margin: 0 auto;
+    padding: 0 auto;
+}
+.wrap_regis {
+    position: relative;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrap_form_pre {
+    position: relative;
+    width: 25%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heading {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    top: 250px;
+    justify-content: center;
+    align-items: center;
+}
+.heading > h1 {
+    font-size: 27px;
+    font-family: 'Kaushan Script', 'cursive';
+    color: #fff;
+}
+
+.forms_regis {
+    position: absolute;
+    display: flex;
+    width: 98%;
+    top: 330px;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    border-radius: 10px;
+}
+.headbox {
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 0px;
+    margin-left: 10%;
+}
+.headbox > h1 {
+    font-size: 27px;
+    width: 100%;
+    color:gray;
+}
+.headbox > p {
+    font-size: 19px;
+    width: 100%;
+    margin-top: -5px;
+}
+
+.formhr {
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 110px;
+}
+.formhr > hr {
+    color: rgb(129, 128, 128);
+    opacity: 0.5;
+}
+
+.box_input_pre {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    top: 130px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+}
+.box_input_text {
+    position: absolute;
+    display: block;
+    width: 90%;
+    top: 0px;
+    height: auto;
+}
+.box_input_text > input {
+    width: 95.5%;
+    margin-top: 20px;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+.boxinput {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    left: -8% !important;
+    top: 260px
+}
+.boxinput > input[type=checkbox] {
+    transform: scale(1.5);
+    margin-left: 15% !important;
+}
+.boxinput > p {
+    margin-left: 15px !important;
+}
+.boxinput > p > a {
+    text-decoration: none;
+    color: blue;
+}
+
+.formhrsecond {
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 450px;
+}
+.formhrsecond > hr {
+    color: rgb(129, 128, 128);
+    opacity: 0.5;
+}
+.form_signin {
+    position: absolute;
+    width: 100%;
+    top: 460px;
+    height: 50px;
+    font-size: 15px;
+}
+.form_signin > p {
+    margin-left: 6%;
+}
+.form_signin > p > a {
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.form_btnss {
+    position: absolute;
+    width: 100%;
+    top: 540px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form_btnss > button {
+    padding: 10px 30px;
+    font-size: 20px;
+    border-radius: 30px;
+    background-color: blue;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0.125rem 0.625rem rgb(63 106 216 / 40%), 0 0.0625rem 0.125rem rgb(63 106 216 / 50%);
+}
+.formhrthird {
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 517px;
+}
+.formhrthird > hr {
+    color: rgb(129, 128, 128);
+    opacity: 0.5;
+}
+.footer {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    top: 950px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
