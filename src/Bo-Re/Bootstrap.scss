@@ -372,6 +372,12 @@ $namealign: (l: left, r: right, b: bottom, t: top);
             margin-right: -#{$i}px;
             margin-top: -#{$i}px;
             margin-bottom: -#{$i}px;
+            &#{\0025}{
+                margin-left: calc(-#{$i}*1%);
+                margin-right: calc(-#{$i}*1%);
+                margin-top: calc(-#{$i}*1%);
+                margin-bottom: calc(-#{$i}*1%);
+            }
         }
     }
     @each $summary, $value in $namealign {
@@ -379,6 +385,9 @@ $namealign: (l: left, r: right, b: bottom, t: top);
             @for $i from 0 through 1000 {
                 &-#{$i}{
                     margin-#{$value}: -#{$i}px;
+                    &#{\0025}{
+                        margin-#{$value}: calc(-#{$i}*1%);
+                    }
                 }
             }
         }
@@ -388,7 +397,14 @@ $namealign: (l: left, r: right, b: bottom, t: top);
             &-#{$i}{
                 margin-left: -#{$i}px;
                 margin-right: -#{$i}px;
+                &#{\0025}{
+                    margin-left: calc(-#{$i}*1%);
+                    margin-right: calc(-#{$i}*1%);
+                }
             }
+        }
+        &-auto {
+            margin: 0 auto;
         }
     }
     &y {
@@ -396,7 +412,14 @@ $namealign: (l: left, r: right, b: bottom, t: top);
             &-#{$i}{
                 margin-top: -#{$i}px;
                 margin-bottom: -#{$i}px;
+                &#{\0025}{
+                    margin-top: calc(-#{$i}*1%);
+                    margin-bottom: calc(-#{$i}*1%);
+                }
             }
+        }
+        &-auto {
+            margin: auto 0;
         }
     }
 }

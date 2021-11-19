@@ -6,7 +6,6 @@ import Login from './components/Pages/Logins/Login';
 import LoginBox from './components/Pages/LoginBox/index';
 import Register from './components/Pages/Register/Register';
 import Registerbox from './components/Pages/RegisterBox/Registerbox';
-import Forgot from './components/Pages/forgotpassword/Forgot';
 import {
   createBrowserHistory,
   createHashHistory,
@@ -14,6 +13,7 @@ import {
 } from 'history' 
 import Mail from './components/Application/Mail/Mail';
 import Menu from './components/Menu/Menu';
+import ForgotPass from './components/Pages/ForgotPass/ForgotPass';
 
 function App(props) {
   return (
@@ -24,7 +24,7 @@ function App(props) {
             <Route path="/loginboxed" element={<LoginBox />} />
             <Route path="/register" element={<Register />} />
             <Route path="/registerboxed" element={<Registerbox />} />
-            <Route path="/forgotpassword" element={<Forgot />} />
+            <Route path="/forgotpassword" element={<ForgotPass />} />
           </Routes>
           <Menu />
           <Routes>
