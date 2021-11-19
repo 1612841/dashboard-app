@@ -1,0 +1,42 @@
+.logoA {
+    background: url(../../../images/logoA.png) center center;
+    background-size: cover;
+}
+.content-slide1 {
+    background: url("../../../images/imgbackg.jpg") no-repeat center center;
+}
+.content-slide2 {
+    background: url("../../../images/imgbackg2.jpg") no-repeat center center;
+}
+.content-slide3 {
+    background: url("../../../images/imgbackg3.jpg") no-repeat center center;
+}
+.content-slide1,
+.content-slide2,
+.content-slide3 {
+    background-size: cover;
+    transition: all ease-in-out 0.5s;
+    opacity: 1;
+    visibility: visible;
+    max-width: 100%;
+    height: 100vh;
+}
+.slide-none {
+    opacity: 0.6;
+    transition: ease-in-out 0.5s;
+    visibility: hidden;
+    max-width: 0px;
+    height: 100vh;
+}
+.dots {
+    box-shadow: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+    .slide-show {
+        display: none !important;
+    }
+    .form-login {
+        width: 100% !important;
+    }
+}

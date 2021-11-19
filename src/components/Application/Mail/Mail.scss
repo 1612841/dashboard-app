@@ -1,0 +1,41 @@
+
+.circle-item {
+    width: 10px;
+    height: 10px;
+    border: 3px solid green;
+    border-radius: 50%;
+}
+.main-mail {
+    width: calc(100% - 308px);
+}
+input:checked ~ span {
+    background: red !important;
+}
+
+.bar-content {
+    transition: all 0.5s;
+    &:hover {
+        background:#0dcaf0;
+        cursor: pointer;
+    }
+}
+
+
+.custom-checkbox-label::before {
+    content: "";
+    display: block;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    pointer-events: none;
+    box-sizing: border-box;
+    border-radius: 2px;
+    border: 1px solid #adb5bd;
+}
+
+.custom-checkbox-input:checked ~ .custom-checkbox-label:before {
+    border: none;
+    background: url("../../../images/check.png") no-repeat  center center;
+    background-size: cover;
+}

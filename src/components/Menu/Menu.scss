@@ -1,0 +1,57 @@
+// ::-webkit-scrollbar {
+//     width: 8px;
+//   }
+
+// /* Track */
+// ::-webkit-scrollbar-track {
+//   box-shadow: inset 0 0 5px grey; 
+//   border-radius: 10px;
+// }
+ 
+// /* Handle */
+// ::-webkit-scrollbar-thumb {
+//   background: rgb(211, 212, 211); 
+//   border-radius: 10px;
+// }
+
+// /* Handle on hover */
+// ::-webkit-scrollbar-thumb:hover {
+//   background: rgb(224, 226, 224); 
+// }
+
+// .navbar-mail {
+//     &:hover {
+//         overflow-y: auto;
+//     }
+// }
+
+.item-link::before {
+    content: '';
+    height: 100%;
+    width: 3px;
+    position: absolute;
+    left: -12px;
+    top: 0;
+    border-radius: 15px;
+    background: #e0f3ff;
+    padding: 0;
+}
+.item-link {
+    &:hover {
+        background: #e0f3ff !important;
+        color: blue !important;
+    }
+    color: black;
+    transition: all ease-in-out 0.2s !important;
+}
+.heading-contain {
+    &:hover {
+        background: #e0f3ff;
+    }
+}
+.ul-contain {
+    transition: all ease-in-out 0.2s !important;
+}
+.ul-contain-none {
+    transition: all ease-in-out 0.25s !important;
+}

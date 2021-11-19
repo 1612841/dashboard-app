@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-:root {
+
+body, html {
     overflow-x: hidden;
-}
-* {
-    font-family: 'Open Sans', sans-serif;
 }
