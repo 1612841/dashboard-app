@@ -27,8 +27,6 @@ function ForgotPass() {
     const [current, setCurrent] = useState(0);
     const [inputs, setInputs] = useState({
         inputEmail: '',
-        inputPassword: '',
-        isActive: false
     });
     const [classes, setClasses] = useState(current)
 
@@ -40,7 +38,7 @@ function ForgotPass() {
     };
 
     const handleSubmit = () => {
-        alert(`Kết quả gồm: email: ${inputs.inputEmail}, password: ${inputs.inputPassword}, checkbox: ${inputs.isActive}`)
+        alert(`Kết quả gồm: email: ${inputs.inputEmail}`)
     };
 
     useEffect(() => {
@@ -86,7 +84,7 @@ function ForgotPass() {
                     </div>
                     <div className='d-flex align-items-center justify-content-space-between mt-24 mir-3%'>
                         <a className='font-size-16 cursor py-8 text-decoration-none color-rgb-blue font-weight-bold' href='/forgotpassword'>Sign in existing account</a>
-                        <button className='btn cursor font-size-13 py-8 px-16 color-light bg-rgb-blue font-weight-bold border-radius-5' onClick={handleSubmit}>Login to Dashboard</button>
+                        <button className='btn cursor font-size-13 py-8 px-16 color-light bg-rgb-blue font-weight-bold border-radius-5' onClick={handleSubmit}>Recover Password</button>
                     </div>
                 </div>
             </div>

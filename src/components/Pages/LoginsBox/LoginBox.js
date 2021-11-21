@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import './Registerbox.scss';
+import './LoginBox.scss';
 
-function Registerbox() {
+function LoginBox() {
 
     const [inputs, setInputs] = useState({
-        email: '',
-        name: '',
-        password: '',
-        reppass: '',
-        check: false
+        inputEmail: '',
+        inputPassword: '',
+        isActive: false
     });
 
-    const submitAll = () => alert(`data gồm email ${inputs.email}, name ${inputs.name}, password ${inputs.password}, reppassword ${inputs.reppass}, active ${inputs.check}`)
+    const handleSubmit = () => {
+        alert(`Kết quả gồm: email: ${inputs.inputEmail}, password: ${inputs.inputPassword}, checkbox: ${inputs.isActive}`)
+    };
 
     return (
         <div className='content w-100% h-100vh d-flex align-items-center justify-content-center'>
@@ -22,10 +22,10 @@ function Registerbox() {
                 <div className='h-auto w-470 bg-light border-radius-4 px-16 pt-16'>
                     <h4 className='opacity-4 font-size-24 font-weight-normal my-8 text-align-center'>Welcome back,</h4>
                     <p className='font-size-17 text-align-center mb-24'>Please sign in to your account below.</p>
-                    <input value={inputs.inputEmail} onChange={(e)=> setInputs({...inputs, email:e.target.value})} className='w-95% font-size-14 border-radius-4 border py-7 px-12 mb-16' type='text' placeholder='Email here...' />
-                    <input value={inputs.inputPassword} onChange={(e)=> setInputs({...inputs, password:e.target.value})} className='w-95% font-size-14 border-radius-4 border py-7 px-12 mb-16' type='text' placeholder='Password here...' />
+                    <input value={inputs.inputEmail} onChange={(e)=> setInputs({...inputs, inputEmail:e.target.value})} className='w-95% font-size-14 border-radius-4 border py-7 px-12 mb-16' type='text' placeholder='Email here...' />
+                    <input value={inputs.inputPassword} onChange={(e)=> setInputs({...inputs, inputPassword:e.target.value})} className='w-95% font-size-14 border-radius-4 border py-7 px-12 mb-16' type='text' placeholder='Password here...' />
                     <div className='d-flex align-items-center'>
-                        <input checked={inputs.isActive} onChange={()=> setInputs({...inputs, check: !inputs.check})} className='check-input ml-1' type='checkbox' />
+                        <input checked={inputs.isActive} onChange={()=> setInputs({...inputs, isActive: !inputs.isActive})} className='check-input ml-1' type='checkbox' />
                         <p className='ml-8 font-size-14'>Keep me logged in</p>
                     </div>
                     <hr className='w-100% my-16 bg-gray-200 opacity-5' />
@@ -35,7 +35,7 @@ function Registerbox() {
                     </h6>
                     <div className='d-flex align-items-center justify-content-right h-70 border-top bg-gray-200 mix-16 border-radius-4'>
                         <a className='font-size-13 cursor py-8 px-16 mx-8 text-decoration-none color-rgb-blue font-weight-bold' href='/forgotpassword'>Recover Password</a>
-                        <button className='btn cursor font-size-13 py-9 mr-16 px-16 color-light bg-rgb-blue font-weight-bold border-radius-6' onClick={submitAll}>Login to Dashboard</button>
+                        <button className='btn cursor font-size-13 py-9 mr-16 px-16 color-light bg-rgb-blue font-weight-bold border-radius-6' onClick={handleSubmit}>Login to Dashboard</button>
                     </div>
                 </div>
             </div>
@@ -43,4 +43,4 @@ function Registerbox() {
     )
 }
 
-export default Registerbox;
+export default LoginBox;

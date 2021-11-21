@@ -1,0 +1,11 @@
+.content {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+.logo {
+    background: url("../../../images/logoA.png") no-repeat center center;
+    background-size: cover;
+}
+.check-input[type=checkbox] {
+    transform: scale(1.1);
+    border-radius: 2px;
+}

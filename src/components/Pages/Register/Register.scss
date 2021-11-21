@@ -1,0 +1,34 @@
+.logoA {
+    background: url(../../../images/logoA.png) center center;
+    background-size: cover;
+}
+.background {
+    background: url("../../../images/bg-night.jpg") no-repeat center center;
+    background-size: cover;
+    height: 99.8vh;
+}
+
+.button-submit {
+    box-shadow: 0 0.125rem 0.625rem rgb(63, 106, 216)40%,
+     0 0.0625rem 0.125rem rgb(63, 106, 216)50% !important;
+    transition: color 0.15s,background-color 0.15s,border-color 0.15s,box-shadow 0.15s !important;
+}
+.button-submit::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(255,255,255,0.4);
+    transition: color 0.15s,background-color 0.15s,border-color 0.15s,box-shadow 0.15s !important;
+}
+
+@media screen and (max-width: 1200px) {
+    .background {
+        display: none !important;
+    }
+    .form-login {
+        width: 100% !important;
+    }
+}

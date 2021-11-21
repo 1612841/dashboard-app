@@ -90,7 +90,7 @@ function Menu() {
     return (
         <nav className='position-fixed navbar-mail'>
             <div className="scrollbar-sidebar w-280 h-100% d-flex justify-content-center">
-                <div className="app-sidebar mx-24 mb-24 mt-2 w-100% h-100%">
+                <div className="app-sidebar mx-24 py-12 w-100% h-100%">
                     <div className='w-100%'>
                         <h1 className='font-size-13 py-12 color-rgb-blue font-weight-bold'>MENU</h1>
                         <h2 className='heading-contain cursor border-radius-4 d-flex h-38 font-size-14 align-items-center align-content-center opacity-7' onClick={() => setArrowChange({...arrowChange, arrowone: !(arrowChange.arrowone),

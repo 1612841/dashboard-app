@@ -86,11 +86,11 @@ function Login() {
                     <div className='row d-flex w-100%'>
                         <div className="col-6 d-block">
                             <h5 className='font-size-14 font-weight-100 h-38 w-92%'>Email</h5>
-                            <input value={inputs.inputEmail} className='w-92% py-10 px-12 mit-10 border border-radius-4 font-size-14 line-height-1' type='text' placeholder='Email here...' onChange={(e)=> setInputs({...inputs, inputEmail:e.target.value})} />
+                            <input value={inputs.inputEmail} className='w-92% py-8 px-12 mit-10 border border-radius-4 font-size-14 line-height-1' type='text' placeholder='Email here...' onChange={(e)=> setInputs({...inputs, inputEmail:e.target.value})} />
                         </div>
                         <div className="col-6 d-block">
                             <h5 className='font-size-14 font-weight-100 w-92% h-38'>Password</h5>
-                            <input value={inputs.inputPassword} className='w-92% py-10 px-12 mit-10 mb-10 border border-radius-4 font-size-14 line-height-1' type='text' placeholder='Password here...' onChange={(e)=> setInputs({...inputs, inputPassword:e.target.value})} />
+                            <input value={inputs.inputPassword} className='w-92% py-8 px-12 mit-10 mb-10 border border-radius-4 font-size-14 line-height-1' type='text' placeholder='Password here...' onChange={(e)=> setInputs({...inputs, inputPassword:e.target.value})} />
                         </div>
                         <div className='d-flex align-items-center align-content-center mt-10'>
                             <input checked={inputs.isActive} className='style-check-input ml-5' type='checkbox' id='checkbox-input' onChange={()=> setInputs({...inputs, isActive: !inputs.isActive})}/>

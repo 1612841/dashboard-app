@@ -3,7 +3,7 @@ import './App.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import Login from './components/Pages/Logins/Login';
-import LoginBox from './components/Pages/LoginBox/index';
+import LoginBox from './components/Pages/LoginsBox/LoginBox';
 import Register from './components/Pages/Register/Register';
 import Registerbox from './components/Pages/RegisterBox/Registerbox';
 import {
