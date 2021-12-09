@@ -30,7 +30,7 @@ router.patch("/:id", async (req, res) => {
 router.delete("/:id", async (req, res) => {
     try {
         await Lists.findByIdAndDelete(req.params.id);
-        res.status(201).json("The list has been deleted")
+        res.status(201).json("deleted")
     } catch (err) {
         res.status(500).json(err)
     }
@@ -47,7 +47,7 @@ router.get("/", async (req, res) => {
 });
 
 //Get
-router.get("/:id", async (req, res) => {
+router.get("/find/:id", async (req, res) => {
     try {
         const lists = await Lists.findById(req.params.id);
         res.status(200).json(lists)
