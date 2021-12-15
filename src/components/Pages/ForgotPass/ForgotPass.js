@@ -70,21 +70,23 @@ function ForgotPass() {
                 </div>
             </div>
             <div className="col-md-8 form-login d-flex justify-content-center h-100vh">
-                <div className='w-50%'>
-                    <img className='mb-48' src='/images/logoA.png' alt='logo' />
-                    <h4 className='mb-8'>
-                        <span className='font-size-24 font-weight-lighter d-flex flex-1-0-100% mb-8 opacity-6'>Forgot your Password?</span>
-                        <span className='font-size-18 font-weight-lighter d-flex flex-1-0-100% mb-24'>Use the form below to recover it.</span>
-                    </h4>
-                    <div className='row d-flex w-100%'>
-                        <div className="col-6 d-block">
-                            <h5 className='font-size-14 font-weight-100 h-38 w-100% mb-8'>Email</h5>
-                            <input value={inputs.inputEmail} className='w-100% py-10 mb-8 mit-10 border border-radius-4 font-size-14 line-height-1 pl-16' type='text' placeholder='Email here...' onChange={(e)=> setInputs({...inputs, inputEmail:e.target.value})} />
+                <div className='center'>
+                    <div>
+                        <img className='mb-48' src='/images/logoA.png' alt='logo' />
+                        <h4 className='mb-8'>
+                            <span className='font-size-24 font-weight-lighter d-flex flex-1-0-100% mb-8 opacity-6 fz-16'>Forgot your Password?</span>
+                            <span className='font-size-18 font-weight-lighter d-flex flex-1-0-100% mb-24 fz-14'>Use the form below to recover it.</span>
+                        </h4>
+                        <div className='row d-flex w-100%'>
+                            <div className="col-6 d-block">
+                                <h5 className='font-size-14 font-weight-100 h-38 w-100% mb-8'>Email</h5>
+                                <input value={inputs.inputEmail} className='w-100% py-10 mb-8 mit-10 border border-radius-4 font-size-14 line-height-1 pl-16 outline-none' type='text' placeholder='Email here...' onChange={(e)=> setInputs({...inputs, inputEmail:e.target.value})} />
+                            </div>
                         </div>
-                    </div>
-                    <div className='d-flex align-items-center justify-content-space-between mt-24 mir-3%'>
-                        <a className='font-size-16 cursor py-8 text-decoration-none color-rgb-blue font-weight-bold' href='/forgotpassword'>Sign in existing account</a>
-                        <button className='btn cursor font-size-13 py-8 px-16 color-light bg-rgb-blue font-weight-bold border-radius-5' onClick={handleSubmit}>Recover Password</button>
+                        <div className='d-flex align-items-center justify-content-space-between mt-24 mir-3%'>
+                            <a className='font-size-16 cursor py-8 text-decoration-none color-rgb-blue font-weight-bold' href='/forgotpassword'>Sign in existing account</a>
+                            <button className='btn cursor font-size-13 py-8 px-16 color-light bg-rgb-blue font-weight-bold border-radius-5' onClick={handleSubmit}>Recover Password</button>
+                        </div>
                     </div>
                 </div>
             </div>

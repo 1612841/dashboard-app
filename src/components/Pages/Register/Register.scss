@@ -7,22 +7,37 @@
     background-size: cover;
     height: 99.8vh;
 }
-
+$color: #0cf;
 .button-submit {
-    box-shadow: 0 0.125rem 0.625rem rgb(63, 106, 216)40%,
-     0 0.0625rem 0.125rem rgb(63, 106, 216)50% !important;
-    transition: color 0.15s,background-color 0.15s,border-color 0.15s,box-shadow 0.15s !important;
-}
-.button-submit::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: rgba(255,255,255,0.4);
-    transition: color 0.15s,background-color 0.15s,border-color 0.15s,box-shadow 0.15s !important;
-}
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &:before {
+      content: '';
+      position: absolute;
+      opacity: 0; //
+      bottom: 0;
+      left: -10%; //
+      max-width: 100%; // quan trong
+      height: 100%;
+      background-color: rgba(255,255,255, 0.5);
+      transition: all 0.3s;  //
+      border-radius: 10rem;
+      z-index: -1;
+      visibility: unset; //
+    }
+    &:hover {
+      color: #fff;
+      opacity: 1;
+      &:before {
+        visibility: visible; //
+        opacity: 1; //
+        width: 100%; //
+        transform: translateX(250px); //
+      }
+    }
+  }
 
 @media screen and (max-width: 1200px) {
     .background {
@@ -31,4 +46,9 @@
     .form-login {
         width: 100% !important;
     }
+}
+@media screen and (min-width: 768px) {
+  .inputs {
+      margin-right: 8px;
+  }
 }

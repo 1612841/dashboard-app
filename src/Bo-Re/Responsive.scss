@@ -7,7 +7,7 @@ $number: (1,2,3,4,5,6,7,8,9,10,11,12);
     }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1399px) {
+@media screen and (min-width: 1200px) {
     .container-xl {
         max-width: 1140px;
         margin: 0 auto;
@@ -23,7 +23,7 @@ $number: (1,2,3,4,5,6,7,8,9,10,11,12);
     }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media screen and (min-width: 992px) {
     .container-lg {
         max-width: 960px;
         margin: 0 auto;
@@ -31,15 +31,15 @@ $number: (1,2,3,4,5,6,7,8,9,10,11,12);
     .col-lg {
         flex: 1 0 0%;
         -webkit-box-flex: 1;
-    }
-    @each $item in $number {
-        &-#{$item} {
-            flex: 1 0 auto !important;
-        };
+        @each $item in $number {
+            &-#{$item} {
+                flex: 1 0 auto !important;
+            };
+        }
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) {
     .container-md {
         max-width: 720px;
         margin: 0 auto;
@@ -55,7 +55,7 @@ $number: (1,2,3,4,5,6,7,8,9,10,11,12);
     }
 }
 
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media screen and (min-width: 576px) {
     .container-sm {
         max-width: 540px;   
         margin: 0 auto;
@@ -70,7 +70,7 @@ $number: (1,2,3,4,5,6,7,8,9,10,11,12);
     }
 }
 
-@media screen and (min-width: 0px) and (max-width: 575px) {
+@media screen and (min-width: 0px) {
     .col-xs {
         flex: 1 0 0%;
         -webkit-box-flex: 1;
@@ -81,3 +81,20 @@ $number: (1,2,3,4,5,6,7,8,9,10,11,12);
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .fz {
+        @for $i from 0 through 100 {
+            &-#{$i} {
+                font-size: #{$i}px !important;
+            }
+        }
+    }
+    .dn {
+        display: none;
+    }
+    .reset {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+  }

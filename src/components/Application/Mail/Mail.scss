@@ -15,7 +15,7 @@ input:checked ~ span {
 .bar-content {
     transition: all 0.5s;
     &:hover {
-        background:#0dcaf0;
+        background: var(--bg-blue);
         cursor: pointer;
     }
 }
@@ -38,4 +38,12 @@ input:checked ~ span {
     border: none;
     background: url("../../../images/check.png") no-repeat  center center;
     background-size: cover;
+}
+.btn {
+    transition: all 0.2s;
+}
+.tab-menu {
+    z-index: 50;
+    transform: translateY(45px) !important;
+    will-change: transform !important;
 }

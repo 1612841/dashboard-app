@@ -1,5 +1,5 @@
 .content {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(to right, #434343 0%, black 100%) !important;
 }
 .logo {
     background: url("../../../images/logoA.png") no-repeat center center;
@@ -9,3 +9,34 @@
     transform: scale(1.1);
     border-radius: 2px;
 }
+
+.button-submit {
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &:before {
+      content: '';
+      position: absolute;
+      opacity: 0; //
+      bottom: 0;
+      left: -10%; //
+      max-width: 100%; // quan trong
+      height: 100%;
+      background-color: rgba(255,255,255, 0.5);
+      transition: all 0.3s;  //
+      border-radius: 10rem;
+      z-index: -1;
+      visibility: unset; //
+    }
+    &:hover {
+      color: #fff;
+      opacity: 1;
+      &:before {
+        visibility: visible; //
+        opacity: 1; //
+        width: 100%; //
+        transform: translateX(250px); //
+      }
+    }
+  }
